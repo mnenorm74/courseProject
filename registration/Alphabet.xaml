@@ -1,0 +1,62 @@
+﻿<Page x:Class="registration.Alphabet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Background="White"
+      Title="" >
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="AlphabetGrid" Focusable="True" Height="1280" KeyDown="AlphabetGrid_KeyDown">
+            <Image x:Name="AlphabetGameRulesBackground" Source="Resources/Background.png" />
+            <Image x:Name="A"  Source="Resources/А.png" Width="200" Height="200" Margin="331,46,1389,1034" MouseDown="letter_MouseDown"/>
+            <Image x:Name="B"  Source="Resources/Б.png" Width="200" Height="200" Margin="536,46,1184,1034" MouseDown="letter_MouseDown"/>
+            <Image x:Name="V"  Source="Resources/В.png" Width="200" Height="200" Margin="747,46,973,1034" MouseDown="letter_MouseDown"/>
+            <Image x:Name="G"  Source="Resources/Г.png" Width="200" Height="200" Margin="952,46,768,1034" MouseDown="letter_MouseDown"/>
+            <Image x:Name="D"  Source="Resources/Д.png" Width="200" Height="200" Margin="1163,59,557,1021" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Ye"  Source="Resources/Е.png" Width="200" Height="200" Margin="1368,45,352,1035" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Yo"  Source="Resources/Ё.png" Width="200" Height="200" Margin="331,246,1389,834" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Zh"  Source="Resources/Ж.png" Width="200" Height="200" Margin="536,254,1184,826" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Z"  Source="Resources/З.png" Width="200" Height="200" Margin="747,246,973,834" MouseDown="letter_MouseDown"/>
+            <Image x:Name="I"  Source="Resources/И.png" Width="200" Height="200" Margin="952,246,768,834" MouseDown="letter_MouseDown"/>
+            <Image x:Name="J"  Source="Resources/Й.png" Width="200" Height="200" Margin="1163,246,557,834" MouseDown="letter_MouseDown"/>
+            <Image x:Name="K"  Source="Resources/К.png" Width="200" Height="200" Margin="1368,246,352,834" MouseDown="letter_MouseDown"/>
+            <Image x:Name="L"  Source="Resources/Л.png" Width="200" Height="200" Margin="331,464,1389,616" MouseDown="letter_MouseDown"/>
+            <Image x:Name="M"  Source="Resources/М.png" Width="200" Height="200" Margin="536,464,1184,616" MouseDown="letter_MouseDown"/>
+            <Image x:Name="N"  Source="Resources/Н.png" Width="200" Height="200" Margin="747,464,973,616" MouseDown="letter_MouseDown"/>
+            <Image x:Name="O"  Source="Resources/О.png" Width="200" Height="200" Margin="952,464,768,616" MouseDown="letter_MouseDown"/>
+            <Image x:Name="P"  Source="Resources/П.png" Width="200" Height="200" Margin="1163,464,557,616" MouseDown="letter_MouseDown"/>
+            <Image x:Name="R"  Source="Resources/Р.png" Width="200" Height="200" Margin="1368,464,352,616" MouseDown="letter_MouseDown"/>
+            <Image x:Name="S"  Source="Resources/С.png" Width="200" Height="200" Margin="331,664,1389,416" MouseDown="letter_MouseDown"/>
+            <Image x:Name="T"  Source="Resources/Т.png" Width="200" Height="200" Margin="536,664,1184,416" MouseDown="letter_MouseDown"/>
+            <Image x:Name="U"  Source="Resources/У.png" Width="200" Height="200" Margin="747,664,973,416" MouseDown="letter_MouseDown"/>
+            <Image x:Name="F"  Source="Resources/Ф.png" Width="200" Height="200" Margin="952,664,768,416" MouseDown="letter_MouseDown"/>
+            <Image x:Name="H"  Source="Resources/Х.png" Width="200" Height="200" Margin="1163,664,557,416" MouseDown="letter_MouseDown"/>
+            <Image x:Name="C"  Source="Resources/Ц.png" Width="200" Height="200" Margin="1368,681,352,399" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Ch"  Source="Resources/Ч.png" Width="200" Height="200" Margin="331,869,1389,211" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Sh"  Source="Resources/Ш.png" Width="200" Height="200" Margin="536,869,1184,211" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Shch"  Source="Resources/Щ.png" Width="200" Height="200" Margin="757,877,963,203" MouseDown="letter_MouseDown"/>
+            <Image x:Name="HardSign"  Source="Resources/Ъ.png" Width="200" Height="200" Margin="959,865,761,215" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Y"  Source="Resources/Ы.png" Width="200" Height="200" Margin="1163,862,557,218" MouseDown="letter_MouseDown"/>
+            <Image x:Name="SoftSign"  Source="Resources/Ь.png" Width="200" Height="200" Margin="1368,869,352,211" MouseDown="letter_MouseDown"/>
+            <Image x:Name="E"  Source="Resources/Э.png" Width="200" Height="200" Margin="640,1056,1080,24" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Yu"  Source="Resources/Ю.png" Width="200" Height="200" Margin="845,1056,875,24" MouseDown="letter_MouseDown"/>
+            <Image x:Name="Ya"  Source="Resources/Я.png" Width="200" Height="200" Margin="1050,1056,670,24" MouseDown="letter_MouseDown"/>
+
+            <Grid x:Name="toMenu" MouseDown="toMenu_MouseDown">
+                <Image x:Name="toALphabet" Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Меню" FontSize="60" Margin="118,1073,1568,96" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="toAlphabetGameRules" MouseDown="toAlphabetGameRules_MouseDown">
+                <Image x:Name="toAlphabetGame" Source="Resources/right.png" Width="300" Height="300" Margin="1560,970,60,10"/>
+                <TextBlock Text="Игра" FontSize="60" Margin="1632,1073,96,111" Foreground="#FF800080"/>
+            </Grid>
+        </Grid>
+    </Viewbox>
+
+
+</Page>

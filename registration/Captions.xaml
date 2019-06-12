@@ -1,0 +1,70 @@
+﻿<Page x:Class="registration.Captions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Caprions"
+      Background="White">
+
+
+    <Viewbox Stretch="Uniform">
+        <Grid Focusable="True" Height="1280" Loaded="Grid_Loaded">
+            <Image Source="Resources/Background.png" />
+            <Image x:Name="OlyaPicture" Source="Resources/Olya.png" Margin="64,224,960,192" />
+            <Image x:Name="VaryaPicture" Source="Resources/Varya.png" Margin="1033,224,87,352" />
+            <Image x:Name="PlayRules" Source="Resources/SoundOn.png"  Width="300" Height="300" Margin="1620,0,0,980" MouseDown="PlayRules_MouseDown"/>
+            <Image x:Name="StopRules" Source="Resources/SoundOff.png" Width="300" Height="300" MouseDown="StopRules_MouseDown" Margin="1620,300,0,680"/>
+            <TextBlock x:Name="Parting" FontSize="80" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Margin="716,534,764,640">
+                    До встречи!
+            </TextBlock>
+            <Grid x:Name="toMenu" MouseDown="toMenu_MouseDown">
+                <Image x:Name="toALphabet" Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Меню" FontSize="60" Margin="118,1073,1568,96" Foreground="#FF800080"/>
+            </Grid>
+
+
+            <Canvas HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Canvas.Resources>
+                    <PathGeometry x:Key="my_path">
+                        <PathFigure IsClosed="False" StartPoint="0,0" >
+                            <ArcSegment Point="0,-5300" ></ArcSegment>
+                        </PathFigure>
+                    </PathGeometry>
+                </Canvas.Resources>
+
+                <Path  StrokeThickness="2" Data="{StaticResource my_path}" ></Path>
+
+                <Grid Name="mainCaption" Width="1200" HorizontalAlignment="Left" Canvas.Left="-576" Canvas.Top="320" Height="4672" >
+                    <TextBlock FontSize="80" HorizontalAlignment="Center" TextAlignment="Center" Margin="40,0,0,32" TextWrapping="Wrap" Width="1160"><Run Text="НАД ПРОЕКТОМ РАБОТАЛИ"/><LineBreak/><LineBreak/><Run Text="СТУДЕНТЫ УРФУ ИМЕНИ ПЕРВОГО ПРЕЗИДЕНТА РОССИИ Б. Н. ЕЛЬЦИНА"/><LineBreak/><LineBreak/><Run Text="ГЛАВНЫЙ РАЗРАБОТЧИК"/><LineBreak/><Run Text="БУРСИНА ОЛЬГА ИГОРЕВНА"/><LineBreak/><InlineUIContainer> 
+                			<Image Source="Resources/Olya.png" />		
+                		</InlineUIContainer><LineBreak/><LineBreak/><Run Text="ГЛАВНЫЙ ДИЗАЙНЕР"/><LineBreak/><Run Text="КОНОВАЛОВА ВАРВАРА ПЕТРОВНА"/><LineBreak/><InlineUIContainer>
+                			<Image Source="Resources/VaryA.png" Height="1152" Width="1016" />
+                		</InlineUIContainer><LineBreak/><Run Text="ЗА ПОМОЩЬ В ОЗВУЧКЕ ВЫРАЖАЕМ БЛАГОДАРНОСТЬ ФРОЛОВОЙ АНАСТАСИИ ИГОРЕВНЕ"/><LineBreak/>
+                    </TextBlock>
+
+
+
+
+                    <Grid.Triggers>
+                        <EventTrigger RoutedEvent="Page.Loaded">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard >
+                                    <Storyboard Completed="Storyboard_Completed">
+                                        <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Top)"
+                                                                  PathGeometry="{StaticResource my_path}"
+                                                                  Duration="0:0:30" FillBehavior="HoldEnd"
+                                                                  Source="Y"></DoubleAnimationUsingPath>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </Grid.Triggers>
+                </Grid>
+            </Canvas>
+
+        </Grid>
+    </Viewbox>
+</Page>

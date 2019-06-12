@@ -1,0 +1,37 @@
+﻿<Page x:Class="registration.Numbers"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Numbers"
+      Background="White">
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="NumbersGrid" Focusable="True" Height="1280" KeyDown="NumbersGrid_KeyDown">
+            <Image x:Name="AlphabetGameRulesBackground" Source="Resources/Background.png" />
+            <Image x:Name="zero" Source="Resources/0.png" Margin="225,372,1395,608" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="one" Source="Resources/1.png" Margin="525,372,1095,608" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="two" Source="Resources/2.png" Margin="830,372,790,608" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="three" Source="Resources/3.png" Margin="1135,372,485,608" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="four" Source="Resources/4.png" Margin="1440,372,180,608" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="five" Source="Resources/5.png" Margin="225,677,1395,303" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="six" Source="Resources/6.png" Margin="525,677,1095,303" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="seven" Source="Resources/7.png" Margin="830,677,790,303" MouseDown="Figure_MouseDown" Width="300" Height="300"/>
+            <Image x:Name="eight" Source="Resources/8.png" Margin="1135,677,485,303" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+            <Image x:Name="nine" Source="Resources/9.png" Margin="1440,677,180,303" MouseDown="Figure_MouseDown"  Width="300" Height="300"/>
+
+            <Grid x:Name="toMenu" MouseDown="toMenu_MouseDown">
+                <Image x:Name="toALphabet" Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Меню" FontSize="60" Margin="126,1073,1560,96" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="toNumbersGameRules" MouseDown="toNumbersGameRules_MouseDown">
+                <Image x:Name="toAlphabetGame" Source="Resources/right.png" Width="300" Height="300" Margin="1560,970,60,10"/>
+                <TextBlock Text="Игра" FontSize="60" Margin="1632,1073,96,111" Foreground="#FF800080"/>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</Page>

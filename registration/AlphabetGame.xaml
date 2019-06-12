@@ -1,0 +1,76 @@
+﻿<Page x:Class="registration.AlphabetGame"
+      x:Name="alphabetGamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Background="White"
+      Title="AlphabetGame">
+
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="controls" Height="1280">
+            <Image x:Name="AlphabetGameRulesBackground" Source="Resources/Background.png" />
+
+            <Grid x:Name="toMenu" MouseDown="toMenu_MouseDown">
+                <Image Source="Resources/left.png" Width="300" Height="300" Margin="52,10,1568,970"/>
+                <TextBlock Text="Меню" FontSize="45" Margin="128,128,1558,1041" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="toAlphabet" MouseDown="toAlphabet_MouseDown">
+                <Image  Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Алфавит" FontSize="45" Margin="118,1088,1568,81" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="check" MouseDown="check_MouseDown">
+                <Image x:Name="toAlphabetGame" Source="Resources/right.png" Width="300" Height="300" Margin="1560,970,60,10"/>
+                <TextBlock Text="Проверить" FontSize="45" Margin="1600,1088,64,96" Foreground="#FF800080"/>
+            </Grid>
+
+            <Image x:Name="Watermelon" Source="Resources/Watermelon.png"  Margin="381,90,1339,990" Width="200" Height="200"/>
+            <Image x:Name="Cat" Source="Resources/Cat.png" Margin="381,295,1339,785" Width="200" Height="200"/>
+            <Image x:Name="Bone" Source="Resources/Bone.png" Margin="382,495,1338,585" Width="200" Height="200"/>
+            <Image x:Name="Sun" Source="Resources/Sun.png" Margin="382,705,1338,375" Width="200" Height="200"/>
+            <Image x:Name="Piggy" Source="Resources/piggy.png" Margin="382,905,1338,175" Width="200" Height="200"/>
+
+            <TextBox Name="А" MaxLength="1" SelectionBrush="Blue" Margin="608,160,1232,1040" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox Name="Р" MaxLength="1" SelectionBrush="Blue" Margin="736,160,1104,1040" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox Name="Б" MaxLength="1" SelectionBrush="Blue" Margin="864,160,976,1040" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox Name="У" MaxLength="1" SelectionBrush="Blue" Margin="992,160,848,1040" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox Name="З" MaxLength="1" SelectionBrush="Blue" Margin="1120,160,720,1040" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+
+            <TextBox Name="К" MaxLength="1" SelectionBrush="Blue" Margin="608,352,1232,848" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox Name="О" MaxLength="1" SelectionBrush="Blue" Margin="736,352,1104,848" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox Name="Т" MaxLength="1" SelectionBrush="Blue" Margin="864,352,976,848" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+
+            <TextBox x:Name="К1" MaxLength="1" SelectionBrush="Blue" Margin="608,544,1232,656" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="О1" MaxLength="1" SelectionBrush="Blue" Margin="736,544,1104,656" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="С" MaxLength="1" SelectionBrush="Blue" Margin="864,544,976,656" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Т1" MaxLength="1" SelectionBrush="Blue" Margin="992,544,848,656" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Ь" MaxLength="1" SelectionBrush="Blue" Margin="1120,544,720,656" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+
+            <TextBox x:Name="С1" MaxLength="1" SelectionBrush="Blue" Margin="608,752,1232,448" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="О2" MaxLength="1" SelectionBrush="Blue" Margin="736,752,1104,448" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Л" MaxLength="1" SelectionBrush="Blue" Margin="864,752,976,448" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Н" MaxLength="1" SelectionBrush="Blue" Margin="992,752,848,448" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Ц" MaxLength="1" SelectionBrush="Blue" Margin="1120,752,720,448" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Е" MaxLength="1" SelectionBrush="Blue" Margin="1248,752,592,448" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+
+            <TextBox x:Name="П" MaxLength="1" SelectionBrush="Blue" Margin="608,962,1232,238" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="О3" MaxLength="1" SelectionBrush="Blue" Margin="736,963,1104,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Р1" MaxLength="1" SelectionBrush="Blue" Margin="864,963,976,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="О4" MaxLength="1" SelectionBrush="Blue" Margin="992,963,848,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="С2" MaxLength="1" SelectionBrush="Blue" Margin="1120,963,720,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Е1" MaxLength="1" SelectionBrush="Blue" Margin="1248,963,592,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="Н1" MaxLength="1" SelectionBrush="Blue" Margin="1376,963,464,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="О5" MaxLength="1" SelectionBrush="Blue" Margin="1502,963,338,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+            <TextBox x:Name="К2" MaxLength="1" SelectionBrush="Blue" Margin="1630,963,210,237" KeyUp="word_KeyUp" Width="80" Height="80" FontSize="60" TextAlignment="Center"/>
+
+            <TextBlock x:Name="Result"   Margin="1024,320,64,814" KeyUp="word_KeyUp" FontSize="60" />
+        </Grid>
+    </Viewbox>
+
+</Page> 

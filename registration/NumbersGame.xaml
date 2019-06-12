@@ -1,0 +1,50 @@
+﻿<Page x:Class="registration.NumbersGame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="NumbersGame"
+      Background="White">
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="NumbersGameGrid" Height="1280" >
+            <Image x:Name="AlphabetGameRulesBackground" Source="Resources/Background.png" />
+
+            <Grid x:Name="toMenu" MouseDown="toMenu_MouseDown">
+                <Image Source="Resources/left.png" Width="300" Height="300" Margin="52,10,1568,970"/>
+                <TextBlock Text="Меню" FontSize="45" Margin="128,128,1558,1041" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="toNumbers" MouseDown="toNumbers_MouseDown">
+                <Image  Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Цифры" FontSize="45" Margin="128,1088,1558,81" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="check" MouseDown="check_MouseDown">
+                <Image x:Name="toAlphabetGame" Source="Resources/right.png" Width="300" Height="300" Margin="1560,970,60,10"/>
+                <TextBlock Text="Проверить" FontSize="45" Margin="1600,1088,64,96" Foreground="#FF800080"/>
+            </Grid>
+
+            <Image x:Name="FirstSheep" Source="Resources/Sheep.png" Margin="527,181,1143,849" Width="250" Height="250"/>
+            <Image x:Name="SecondSheep" Source="Resources/Sheep.png" Margin="777,181,893,849" Width="250" Height="250"/>
+            <TextBox Name="SheepCount" MaxLength="1" SelectionBrush="Blue" Margin="1059,232,741,928" KeyUp="SheepCount_KeyUp" Width="120" Height="120" TextAlignment="Center" FontSize="60"/>
+            <TextBlock x:Name="firstResult" Height="120" Margin="1243,232,229,928" TextAlignment="Left" FontSize="60"/>
+
+            <Image x:Name="FirstCarrot" Source="Resources/Carrot.png" Margin="206,494,1464,536" Width="250" Height="250"/>
+            <Image x:Name="SecondCarrot" Source="Resources/Carrot.png" Margin="456,494,1214,536" Width="250" Height="250"/>
+            <Image x:Name="ThirdCarrot" Source="Resources/Carrot.png" Margin="711,494,959,536" Width="250" Height="250"/>
+            <Image x:Name="FourthCarrot" Source="Resources/Carrot.png" Margin="961,494,709,536" Width="250" Height="250"/>
+            <TextBox Name="CarrotCount" MaxLength="1" SelectionBrush="Blue" Margin="1211,552,589,608" KeyUp="CarrotCount_KeyUp" Width="120" Height="120" TextAlignment="Center" FontSize="60"/>
+            <TextBlock x:Name="secondResult"   Margin="1403,552,101,608"  Height="120" TextAlignment="Left" FontSize="60"/>
+
+            <Image x:Name="FirstBall" Source="Resources/Ball.png" Margin="456,776,1214,254" Width="250" Height="250"/>
+            <Image x:Name="SecondBall" Source="Resources/Ball.png" Margin="706,776,964,254" Width="250" Height="250"/>
+            <Image x:Name="ThirdBall" Source="Resources/Ball.png" Margin="956,776,714,254" Width="250" Height="250"/>
+            <TextBox Name="BallCount" MaxLength="1" SelectionBrush="Blue" Margin="1251,840,549,320" KeyUp="BallCount_KeyUp" Width="120" Height="120" TextAlignment="Center" FontSize="60"/>
+            <TextBlock x:Name="thirdResult"   Margin="1376,864,128,296" Height="120" TextAlignment="Left" FontSize="60"/>
+        </Grid>
+    </Viewbox>
+</Page>

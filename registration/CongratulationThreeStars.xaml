@@ -1,0 +1,40 @@
+﻿<Page x:Class="registration.CongratulationThreeStars"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="CongratulationThreeStars"
+      Background="White">
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="CongratuletionGrid" Focusable="True" Height="1280">
+            <Image Source="Resources/Background.png" />
+            <Image Source="Resources/CatWin.png" />
+            <Image Source="Resources/Star.png" Margin="721,10,687,950" />
+            <Image Source="Resources/Star.png" Margin="1009,10,399,950" />
+            <Image Source="Resources/Star.png" Margin="433,10,975,950" />
+
+            <Grid x:Name="ToMenu" MouseDown="ToMenu_MouseDown">
+                <Image Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Меню" FontSize="45" Margin="150,1088,1600,96" Foreground="#FF800080"/>
+            </Grid>
+
+
+            <TextBox x:Name="mailBox" Margin="0,1056,0,144" HorizontalAlignment="Center"  Width="700" Height="80" KeyUp="mailBox_KeyUp" FontSize="60"/>
+
+            <Grid x:Name="Send" MouseDown="Send_MouseDown">
+                <Image Source="Resources/right.png" Width="300" Height="300" Margin="1560,970,60,10" />
+                <TextBlock Text="Отправить" FontSize="45"  Foreground="#FF800080" Margin="1602,1088,94,96"/>
+            </Grid>
+
+            <TextBlock  HorizontalAlignment="Center" FontSize="60" Margin="648,1185,648,0">
+                <Hyperlink NavigateUri="Captions.xaml"><Run Text="Завершить без письма"/></Hyperlink>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="60" Margin="404,984,391,173" Width="1126" >Введите e-mail чтобы получить награду</TextBlock>
+        </Grid>
+    </Viewbox>
+
+</Page>

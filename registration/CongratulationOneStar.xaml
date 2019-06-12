@@ -1,0 +1,24 @@
+﻿<Page x:Class="registration.CongratulationOneStar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="CongratulationOneStar"
+      Background="White">
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="CongratuletionGrid" Focusable="True" Height="1280" KeyDown="CongratuletionGrid_KeyDown" Loaded="CongratuletionGrid_Loaded">
+            <Image x:Name="AlphabetGameRulesBackground" Source="Resources/Background.png" />
+            <Image Source="Resources/CatWin.png" />
+            <Image Source="Resources/Star.png" Margin="736,10,672,950" />
+
+            <Grid x:Name="ToMenu" MouseDown="ToMenu_MouseDown">
+                <Image Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Меню" FontSize="60" Margin="118,1073,1568,96" Foreground="#FF800080"/>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</Page>

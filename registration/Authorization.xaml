@@ -1,0 +1,42 @@
+﻿<Page x:Class="registration.Authorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Background="White"
+      x:Name="authorizationPage" >
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="authorizationGrid" Height="1280">
+            <Image Source="Resources/authorization.png"/>
+
+            <TextBox x:Name="login" SelectionBrush="Blue"  TextAlignment="Center" KeyUp="login_KeyDown" Height="80" Width="700" Margin="0,378,0,822" HorizontalAlignment="Center" FontSize="60"/>
+            <TextBlock x:Name="enterLogin" Text ="Введите логин "  HorizontalAlignment="Center" Margin="0,270,0,928" FontSize="60"/>
+
+            <TextBlock x:Name="enterPassword" Text ="Введите пароль"  HorizontalAlignment="Center" Margin="0,543,0,660" FontSize="60"/>
+            <PasswordBox x:Name="password" HorizontalContentAlignment="Center" SelectionBrush="Blue" Height="80" Width="700" Margin="0,660,0,540" KeyUp="password_KeyDown" FontSize="60"/>
+
+            <TextBlock Margin="384,1169,928,35" FontSize="60">
+                <Hyperlink NavigateUri="Registration.xaml"><Run Text="Зарегистрироваться"/></Hyperlink>
+            </TextBlock>
+
+            <TextBlock Margin="1024,1169,352,35" FontSize="60">
+                <Hyperlink NavigateUri="Deleting.xaml"><Run Text="Удалить аккаунт"/></Hyperlink>
+            </TextBlock>
+
+            <TextBlock Margin="0,1024,0,179" HorizontalAlignment="Center" FontSize="60">
+                <Hyperlink NavigateUri="EntryWithoutLogin.xaml"><Run Text="Войти без аккаунта"/></Hyperlink>
+            </TextBlock>
+
+            <Grid x:Name="registrate" MouseDown="registrate_MouseDown" >
+                <Image Source="Resources/NarrowButton.png" Width="700" Margin="615,808,605,344" />
+                <TextBlock HorizontalAlignment="Center" Text="Войти" FontSize="60" Margin="864,832,864,384"/>
+            </Grid>
+
+        </Grid>
+    </Viewbox>
+
+</Page>

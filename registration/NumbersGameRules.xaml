@@ -1,0 +1,34 @@
+﻿<Page x:Class="registration.NumbersGameRules"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="NumbersGameRules"
+      Background="White">
+
+    <Viewbox Stretch="Uniform">
+        <Grid x:Name="NumbersGameRulesGrid" Focusable="True" Height="1280" KeyDown="NumbersGameRulesGrid_KeyDown">
+            <Image x:Name="AlphabetGameRulesBackground" Source="Resources/Background.png" />
+            <Image x:Name="PlayRules" Source="Resources/SoundOn.png"  Width="300" Height="300" Margin="896,160,724,820" MouseDown="PlayRules_MouseDown"/>
+            <Image x:Name="StopRules" Source="Resources/SoundOff.png" Width="300" Height="300" MouseDown="StopRules_MouseDown" Margin="1184,160,436,820"/>
+
+            <TextBlock FontSize="60" TextAlignment="Justify" Margin="342,512,278,128" Width="1300" TextWrapping="Wrap">
+                Перед тобой три ряда с картинками. Каждому ряду соотвествует ячейка. Нужно                 посчитать сколько повторяющихся изображений в ряду и написать это значение в соответствующую ячейку.
+            </TextBlock>
+
+            <Grid x:Name="toNumbersGame" MouseDown="toNumbersGame_MouseDown">
+                <Image x:Name="toAlphabetGame" Source="Resources/right.png" Width="300" Height="300" Margin="1560,970,60,10"/>
+                <TextBlock Text="Игра" FontSize="60" Margin="1632,1073,96,111" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="toNumbers" MouseDown="toNumbers_MouseDown">
+                <Image x:Name="toALphabet" Source="Resources/left.png" Width="300" Height="300" Margin="60,970,1560,10"/>
+                <TextBlock Text="Цифры" FontSize="60" Margin="111,1076,1575,93" Foreground="#FF800080"/>
+            </Grid>
+        </Grid>
+    </Viewbox>
+    
+</Page>

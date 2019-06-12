@@ -1,0 +1,47 @@
+﻿<Page x:Class="registration.FiguresGame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:registration"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="FiguresGame"
+      Background="White">
+
+    <Viewbox Stretch="Uniform">
+        <Grid Height="1280" >
+            <Image Source="Resources/FiguresGameField.png" />
+            <Image x:Name="Circle" Source="Resources/FiguresGameCircle.png" MouseDown="Element_MouseDown" Margin="1606,8,148,904"/>
+            <Image x:Name="Ellips" Source="Resources/FiguresGameEllips.png"  MouseDown="Element_MouseDown" Margin="1570,585,280,568" />
+            <Image x:Name="Pentagon" Source="Resources/FiguresGamePentagon.png"  MouseDown="Element_MouseDown" Margin="153,192,1625,625"/>
+            <Image x:Name="Rectangle" Source="Resources/FiguresGameRectangle.png"  MouseDown="Element_MouseDown" Margin="763,616,1290,509"/>
+            <Image x:Name="Rhombus" Source="Resources/FiguresGameRhombus.png" Margin="1311,41,623,921" MouseDown="Element_MouseDown"/>
+            <Image x:Name="Square" Source="Resources/FiguresGameSquare.png" Margin="497,620,1453,477" MouseDown="Element_MouseDown"/>
+            <Image x:Name="Trapezium" Source="Resources/FiguresGameTrapezium.png" MouseDown="Element_MouseDown" Margin="1293,833,239,152" />
+            <Image x:Name="Triangle" Source="Resources/FiguresGameTriangle.png" Margin="462,493,1411,650" MouseDown="Element_MouseDown"/>
+
+            <TextBlock x:Name="Result"    Height="120" TextAlignment="Left" FontSize="60" Margin="1314,428,2,732"/>
+
+
+
+
+
+            <Grid x:Name="toFigures" MouseDown="toFigures_MouseDown">
+                <Image x:Name="toALphabet" Source="Resources/left.png" Width="300" Height="300" Margin="22,1019,1817,-39"/>
+                <TextBlock Text="Фигуры" FontSize="45" Margin="114,1132,1827,37" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="toMenu" MouseDown="toMenu_MouseDown">
+                <Image Source="Resources/left.png" Width="300" Height="300" Margin="58,-37,1781,1017"/>
+                <TextBlock Text="Меню" FontSize="45" Margin="152,79,1833,1139" Foreground="#FF800080"/>
+            </Grid>
+
+            <Grid x:Name="check" MouseDown="check_MouseDown">
+                <Image x:Name="toAlphabetGame" Source="Resources/right.png" Margin="1884,1007,10,-26"/>
+                <TextBlock Text="Проверить" FontSize="45" Margin="1925,1122,27,63" Foreground="#FF800080"/>
+            </Grid>
+
+        </Grid>
+    </Viewbox>
+</Page>

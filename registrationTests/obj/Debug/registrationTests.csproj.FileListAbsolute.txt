@@ -1,0 +1,7 @@
+c:\users\оля\documents\visual studio 2015\Projects\registration\registrationTests\bin\Debug\registrationTests.dll
+c:\users\оля\documents\visual studio 2015\Projects\registration\registrationTests\bin\Debug\registrationTests.pdb
+c:\users\оля\documents\visual studio 2015\Projects\registration\registrationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\оля\documents\visual studio 2015\Projects\registration\registrationTests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+c:\users\оля\documents\visual studio 2015\Projects\registration\registrationTests\obj\Debug\registrationTests.csprojResolveAssemblyReference.cache
+c:\users\оля\documents\visual studio 2015\Projects\registration\registrationTests\obj\Debug\registrationTests.dll
+c:\users\оля\documents\visual studio 2015\Projects\registration\registrationTests\obj\Debug\registrationTests.pdb
